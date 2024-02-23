@@ -1,27 +1,35 @@
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import {
   Table,
   TableBody,
   TableCell,
+  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { Search } from 'lucide-react'
+
+import DespesasDialog from './DespesasDialog'
+import DespesasTableFilter from './DespesasTableFilter'
 
 export default async function DespesasTable() {
+  'use server'
   const response = await fetch('http://localhost:3333/despesas')
   const data = await response.json()
+
+  let valorTotal = 0
+  data.forEach((element: unknown) => {
+    const valor = parseFloat(element.valor)
+    valorTotal += valor
+  })
 
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-3xl font-bold tracking-tight">Despesas</h1>
       <div className="space-y-2.5">
-        <form className="flex items-center gap-2">
-          <span className="text-sm font-semibold">Filtros</span>
-          <Input placeholder="Nome da despesa" className="h- w-[320px]" />
-        </form>
+        <div className="flex justify-between">
+          <DespesasTableFilter />
+          <DespesasDialog />
+        </div>
 
         <div className="border rounded-md">
           <Table>
@@ -31,36 +39,34 @@ export default async function DespesasTable() {
                 <TableHead>Despesa</TableHead>
                 <TableHead>Categoria</TableHead>
                 <TableHead>Fornecedor</TableHead>
+                <TableHead>Data</TableHead>
                 <TableHead>Valor</TableHead>
                 <TableHead></TableHead>
                 <TableHead></TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody>
-              {data.map((item) => (
+            <TableBody className="overflow">
+              {data.map((item: any) => (
                 <TableRow key={item.id}>
-                  <TableCell>
-                    <Button variant="outline" size="sm">
-                      <Search />
-                      <span className="sr-only">Detalhes do pedido</span>
-                    </Button>
-                  </TableCell>
+                  <TableCell></TableCell>
                   <TableCell>{item.despesa}</TableCell>
                   <TableCell>{item.categoria}</TableCell>
                   <TableCell>{item.fornecedor}</TableCell>
-                  <TableCell>{item.valor}</TableCell>
+                  <TableCell>{item.data}</TableCell>
+                  <TableCell>R$ {parseFloat(item.valor)}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
+            <TableFooter>
+              <TableRow>
+                <TableCell></TableCell>
+                <TableCell colSpan={4}>Total</TableCell>
+                <TableCell>R$ {valorTotal}</TableCell>
+              </TableRow>
+            </TableFooter>
           </Table>
         </div>
       </div>
     </div>
   )
-}
-{
-  /* <Button variant="outline" size="sm">
-<Search />
-<span className="sr-only">Detalhes do pedido</span>
-</Button> */
 }

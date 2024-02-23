@@ -5,6 +5,7 @@ import {
   ShoppingCart,
   PersonStanding,
   User,
+  FolderClosed,
 } from 'lucide-react'
 import { NavItem } from './NavItem'
 import { usePathname } from 'next/navigation'
@@ -35,6 +36,12 @@ export default function MainNavigation() {
         link={'/dashboard/produtos'}
         title="Produtos"
         icon={ShoppingCart}
+        path={pathname}
+      />
+      <NavItem
+        link={'/dashboard/categorias'}
+        title="Categorias"
+        icon={FolderClosed}
         path={pathname}
       />
       <NavItem

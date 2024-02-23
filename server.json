@@ -1,0 +1,135 @@
+{
+  "despesas": [
+    {
+      "id": "806f",
+      "despesa": "Farinha",
+      "categoria": "Pães ",
+      "fornecedor": "Zé da farinha",
+      "data": "2024-01-15",
+      "valor": "250"
+    },
+    {
+      "id": "618e",
+      "despesa": "Farinha",
+      "categoria": "Panificação",
+      "fornecedor": "Zé da farinha",
+      "data": "2024-02-09",
+      "valor": "250"
+    },
+    {
+      "id": "cb81",
+      "despesa": "Queijo",
+      "categoria": "Frios",
+      "fornecedor": "Marcio dos queijos",
+      "data": "2024-02-20",
+      "valor": "25"
+    },
+    {
+      "id": "73cb",
+      "despesa": "Farinha",
+      "categoria": "Panificação",
+      "fornecedor": "Zé da farinha",
+      "data": "2024-02-22",
+      "valor": "250.55"
+    },
+    {
+      "id": "e953",
+      "despesa": "Pão de queijo",
+      "categoria": "Panificação",
+      "fornecedor": "Assaí",
+      "data": "2024-02-22",
+      "valor": "58,85"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "0",
+      "value": "carnespeixesfrangos",
+      "item": "Carnes/Peixes/Frangos"
+    },
+    {
+      "id": "1",
+      "value": "ovos",
+      "item": "Ovos"
+    },
+    {
+      "id": "2",
+      "value": "panificacaodeconfeitaria",
+      "item": "Panificação/Confeitaria"
+    },
+    {
+      "id": "3",
+      "value": "salgados",
+      "item": "Salgados"
+    },
+    {
+      "id": "4",
+      "value": "hortifruti",
+      "item": "Hortifruti"
+    },
+    {
+      "id": "5",
+      "value": "cigarros",
+      "item": "Cigarros"
+    },
+    {
+      "id": "6",
+      "value": "frios",
+      "item": "Frios"
+    },
+    {
+      "id": "7",
+      "value": "sorvetes",
+      "item": "Sorvetes"
+    },
+    {
+      "id": "8",
+      "value": "bebidas",
+      "item": "Bebidas"
+    },
+    {
+      "id": "9",
+      "value": "farinhas",
+      "item": "Farinhas"
+    },
+    {
+      "id": "10",
+      "value": "embalagens",
+      "item": "Embalagens"
+    },
+    {
+      "id": "11",
+      "value": "diversos",
+      "item": "Diversos"
+    },
+    {
+      "id": "d981",
+      "value": "teste-de-valor",
+      "item": "Teste de valor"
+    },
+    {
+      "id": "1550",
+      "value": "teste-de-valor-2",
+      "item": "teste de valor 2"
+    },
+    {
+      "id": "aed5",
+      "value": "panificcacao-braba",
+      "item": "Panificcação braba"
+    },
+    {
+      "id": "cd2f",
+      "value": "fixas",
+      "item": "Fixas"
+    }
+  ],
+  "despesas_fixas": [
+    {
+      "id": "1",
+      "despesa fixa": "conta de luz",
+      "categoria": "estabelecimento",
+      "fornecedor": "EDP",
+      "valor": "550"
+    }
+  ]
+}
