@@ -7,8 +7,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { Pen, X } from 'lucide-react'
+import { Pen } from 'lucide-react'
 import AdicionarCategoria from './AdicionarCategoria'
+import Pagination from '@/components/Pagination'
 
 interface Categoria {
   id: number
@@ -21,7 +22,7 @@ export default async function CategoriasTable() {
   const data = await response.json()
 
   return (
-    <div className="space-y-6 ">
+    <div className="space-y-2 ">
       <AdicionarCategoria />
       <div className="border rounded-md overflow">
         <Table>
@@ -44,15 +45,14 @@ export default async function CategoriasTable() {
                 </TableCell>
 
                 <TableCell>
-                  <Button size="xs">
-                    <X />
-                  </Button>
+                  <Button>X</Button>
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </div>
+      <Pagination pageIndex={0} totalCount={50} perPage={12} />
     </div>
   )
 }
