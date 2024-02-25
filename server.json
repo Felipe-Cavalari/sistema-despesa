@@ -39,6 +39,14 @@
       "fornecedor": "Assaí",
       "data": "2024-02-22",
       "valor": "58,85"
+    },
+    {
+      "id": "6936",
+      "despesa": "",
+      "categoria": "",
+      "fornecedor": "",
+      "data": "",
+      "valor": ""
     }
   ],
   "categorias": [
@@ -106,6 +114,11 @@
       "id": "cc06",
       "value": "diversos",
       "item": "Diversos"
+    },
+    {
+      "id": "9977",
+      "value": "",
+      "item": ""
     }
   ],
   "despesas_fixas": [
