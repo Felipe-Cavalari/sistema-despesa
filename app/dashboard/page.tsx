@@ -1,5 +1,6 @@
 import MonthExpensesCard from './components/month-expenses-card'
 import MonthExpensesChart from './components/month-expenses-chart'
+import PopularProductsChart from './components/popular-expenses-chart'
 
 export default function Dashboard() {
   return (
@@ -13,8 +14,9 @@ export default function Dashboard() {
         <MonthExpensesCard />
       </div>
 
-      <div className="grid grid-cols-9">
+      <div className="grid grid-cols-9 space-x-2">
         <MonthExpensesChart />
+        <PopularProductsChart />
       </div>
     </div>
   )

@@ -30,7 +30,7 @@ const data = [
 
 export default function MonthExpensesChart() {
   return (
-    <Card className="col-span-6">
+    <Card className="col-span-5">
       <CardHeader>
         <div className="space-y-1">
           <CardTitle>Despesas no Período</CardTitle>
@@ -38,7 +38,7 @@ export default function MonthExpensesChart() {
         </div>
       </CardHeader>
       <CardContent>
-        <ResponsiveContainer width={'100%'} height={250}>
+        <ResponsiveContainer width={'100%'} height={200}>
           <LineChart data={data} style={{ fontSize: 12 }}>
             <YAxis
               width={100}
@@ -53,7 +53,7 @@ export default function MonthExpensesChart() {
               }
             />
 
-            <CartesianGrid vertical={false} />
+            <CartesianGrid vertical={false} className="stroke-muted" />
             <Line
               type="linear"
               strokeWidth={2}
@@ -61,6 +61,7 @@ export default function MonthExpensesChart() {
               stroke={colors.orange['500']}
             />
             <XAxis axisLine={false} tickLine={false} dataKey={'date'} dy={16} />
+            <Tooltip />
           </LineChart>
         </ResponsiveContainer>
       </CardContent>
