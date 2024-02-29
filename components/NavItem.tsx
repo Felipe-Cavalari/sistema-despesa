@@ -12,13 +12,11 @@ export function NavItem({ title, link, path, icon: Icon }: NavItemProps) {
   return (
     <Link
       href={link}
-      className={`${link === path ? 'bg-primary text-white' : ''} group flex items-center gap-3 rounded p-3 hover:bg-primary`}
+      className={`${link === path ? 'bg-primary' : ''} group flex items-center gap-3 rounded p-3 hover:bg-primary`}
     >
-      <Icon
-        className={`${link === path ? 'text-white' : ''} size-5 text-foreground group-hover:text-white`}
-      />
+      <Icon className={`size-5  group-hover:text-black`} />
       <span
-        className={`${link === path ? 'text-white' : ''}  font-medium text-foreground group-hover:text-white `}
+        className={`hidden font-medium text-foreground ease-out group-hover:text-black group-hover:block group-hover:ease-in duration-700`}
       >
         {title}
       </span>

@@ -4,7 +4,6 @@ import {
   DollarSign,
   ShoppingCart,
   PersonStanding,
-  User,
   FolderClosed,
 } from 'lucide-react'
 import { NavItem } from './NavItem'
@@ -13,7 +12,7 @@ import { usePathname } from 'next/navigation'
 export default function MainNavigation() {
   const pathname = usePathname()
   return (
-    <nav className="space-y-3">
+    <nav className="space-y-3 w-12 group-hover:w-56 animation duration-300 ">
       <NavItem
         link={'/dashboard'}
         title="Dashboard"
@@ -42,12 +41,6 @@ export default function MainNavigation() {
         link={'/dashboard/categorias'}
         title="Categorias"
         icon={FolderClosed}
-        path={pathname}
-      />
-      <NavItem
-        link={'/dashboard/usuarios'}
-        title="Usuarios"
-        icon={User}
         path={pathname}
       />
     </nav>
