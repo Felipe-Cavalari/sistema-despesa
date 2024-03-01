@@ -8,8 +8,9 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { Pen } from 'lucide-react'
-import AdicionarCategoria from './AdicionarCategoria'
+import AdicionarCategoria from './adicionar-categoria-dialog'
 import Pagination from '@/components/Pagination'
+import DeletarCategoria from './deletar-categoria'
 
 interface Categoria {
   id: number
@@ -45,7 +46,10 @@ export default async function CategoriasTable() {
                 </TableCell>
 
                 <TableCell>
-                  <Button>X</Button>
+                  <DeletarCategoria
+                    id={String(categoria.id)}
+                    name={String(categoria.item)}
+                  />
                 </TableCell>
               </TableRow>
             ))}

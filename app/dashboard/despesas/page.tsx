@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Coins, Receipt } from 'lucide-react'
-import DespesasTable from './components/DespesasTable'
+import DespesasTable from './components/despesas-table'
 
 export default function Home() {
   return (

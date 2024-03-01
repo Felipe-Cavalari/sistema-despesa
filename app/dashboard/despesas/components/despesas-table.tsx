@@ -8,8 +8,8 @@ import {
   TableRow,
 } from '@/components/ui/table'
 
-import DespesasDialog from './DespesasDialog'
-import DespesasTableFilter from './DespesasTableFilter'
+import DespesasDialog from './despesas-dialog'
+import DespesasTableFilter from './despesas-table-filter'
 
 export default async function DespesasTable() {
   'use server'

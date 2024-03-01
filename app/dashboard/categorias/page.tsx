@@ -1,4 +1,4 @@
-import CategoriasTable from './components/CategoriasTable'
+import CategoriasTable from './components/categoria-table'
 
 export default function Categorias() {
   return (

@@ -12,7 +12,7 @@ import { usePathname } from 'next/navigation'
 export default function MainNavigation() {
   const pathname = usePathname()
   return (
-    <nav className="space-y-3 w-12 group-hover:w-56 animation duration-300 ">
+    <nav className="space-y-3 w-12 group-hover:w-56 group-hover:ease-in group-hover:duration-150 ease-out duration-100   ">
       <NavItem
         link={'/dashboard'}
         title="Dashboard"

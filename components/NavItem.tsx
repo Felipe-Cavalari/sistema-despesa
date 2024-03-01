@@ -12,14 +12,18 @@ export function NavItem({ title, link, path, icon: Icon }: NavItemProps) {
   return (
     <Link
       href={link}
-      className={`${link === path ? 'bg-primary' : ''} group flex items-center gap-3 rounded p-3 hover:bg-primary`}
+      className={`${link === path ? 'bg-primary' : ''} group/item flex items-center gap-3 rounded p-3 hover:bg-primary`}
     >
-      <Icon className={`size-5  group-hover:text-black`} />
-      <span
-        className={`hidden font-medium text-foreground ease-out group-hover:text-black group-hover:block group-hover:ease-in duration-700`}
-      >
-        {title}
-      </span>
+      <div className="flex gap-3 ">
+        <Icon
+          className={`${link === path ? 'text-white' : ''} size-5  group-hover/item:text-white`}
+        />
+        <span
+          className={`${link === path ? 'text-white' : ''} font-medium opacity-0 text-foreground group-hover:block group-hover:opacity-100 group-hover:ease-in group-hover:duration-300 ease-out duration-100`}
+        >
+          <span className="group-hover/item:text-white">{title} </span>
+        </span>
+      </div>
     </Link>
   )
 }

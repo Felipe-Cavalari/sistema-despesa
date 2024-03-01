@@ -5,11 +5,15 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogFooter,
-  DialogClose,
 } from '@/components/ui/dialog'
+import DeletarCategoriaForm from './deletar-categoria-form'
 
-export default async function DeletarCategoria(id: string) {
+interface DeletarCategoria {
+  name: string
+  id: string
+}
+
+export default async function DeletarCategoria(categoria: DeletarCategoria) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -19,14 +23,7 @@ export default async function DeletarCategoria(id: string) {
         <DialogHeader>
           <DialogTitle>Deseja excluir essa categoria? </DialogTitle>
         </DialogHeader>
-        <DialogFooter className="grid grid-cols-2">
-          <Button>Sim</Button>
-          <DialogClose asChild>
-            <Button type="button" variant="secondary">
-              Cancelar
-            </Button>
-          </DialogClose>
-        </DialogFooter>
+        <DeletarCategoriaForm id={categoria.id} name={categoria.name} />
       </DialogContent>
     </Dialog>
   )

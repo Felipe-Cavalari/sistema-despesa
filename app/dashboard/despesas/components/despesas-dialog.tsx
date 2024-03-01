@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
-import FormVariavel from './FormVariável'
+import FormVariavel from './despesas-form-variavel'
 
 export default function DespesasDialog() {
   return (

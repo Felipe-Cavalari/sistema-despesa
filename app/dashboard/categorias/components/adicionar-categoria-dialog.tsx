@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
-import AdicionarCategoriaForm from './AdicionarCategoriaForm'
+import AdicionarCategoriaForm from './adicionar-categoria-form'
 
 export default function AdicionarCategoria() {
   return (
