@@ -29,8 +29,10 @@ export default async function CategoriasTable() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead colSpan={3}></TableHead>
-              <TableHead className="text-xl"></TableHead>
+              <TableHead></TableHead>
+              <TableHead>Nome</TableHead>
+              <TableHead>Editar</TableHead>
+              <TableHead>Deletar</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

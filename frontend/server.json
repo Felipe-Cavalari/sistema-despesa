@@ -56,11 +56,6 @@
       "item": "Carnes/Peixes/Frangos"
     },
     {
-      "id": "1",
-      "value": "ovos",
-      "item": "Ovos"
-    },
-    {
       "id": "2",
       "value": "panificacaodeconfeitaria",
       "item": "Panificação/Confeitaria"
@@ -106,19 +101,8 @@
       "item": "Embalagens"
     },
     {
-      "id": "11",
-      "value": "diversos",
-      "item": "Diversos"
-    },
-    {
-      "id": "cc06",
-      "value": "diversos",
-      "item": "Diversos"
-    },
-    {
-      "id": "06ba",
-      "value": "categoria-nova",
-      "item": "Categoria nova"
+      "item": "Diversos2",
+      "id": "11"
     }
   ],
   "despesas_fixas": [
