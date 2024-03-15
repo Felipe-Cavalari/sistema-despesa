@@ -1,6 +1,5 @@
 from fastapi import FastAPI
-from api.endpoints import categorias, users
-
+from api.endpoints import categorias
 
 app = FastAPI()
 
@@ -11,4 +10,3 @@ async def read_root():
 
 
 app.include_router(categorias.router)
-app.include_router(users.router)
